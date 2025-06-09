@@ -27,7 +27,7 @@ def hello():
 
 @app.route('/titanic')
 def titanic():
-    df = pd.read_csv('app/titanic.csv')
+    df = pd.read_csv('titanic.csv')
     table = df.head().to_html(classes='data', index=False)
 
     survived = df[df['Survived'] == 1]
