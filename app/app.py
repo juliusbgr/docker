@@ -30,8 +30,8 @@ def titanic():
     df = pd.read_csv('titanic.csv')
     table = df.head().to_html(classes='data', index=False)
 
-    survived = df[df['Survived'] == 1]
-    gender_counts = survived['Sex'].value_counts().to_dict()
+    survived = df[df['survived'] == 1]
+    gender_counts = survived['sex'].value_counts().to_dict()
 
     return render_template(
         'titanic.html',
